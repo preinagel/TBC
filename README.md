@@ -28,11 +28,11 @@ A set of Python packages containing utility functions developed for working with
    computational functions that operate on data to generate numerical results specifically relating to temporal barcode analysis
 #### tbc_visualization.py 
    functions for conveniently visualizing output of computations (a direct companion of tbc_computation.py)
-
-### Demos
-Jupyter notebooks that demonstrate how to use the functions in the other packages, or that demonstrate the validity of implementations and approximations in those functions
 ### Docs
-Documentation automatically updated from docstrings using Sphinx
+Documentation of the above packages, automatically updated from docstrings using Sphinx
+### Demos
+A folder containing Jupyter notebooks that demonstrate how to use the functions in the other packages, or that demonstrate the validity of implementations and approximations in those functions, along with very small toy datasets used by those demos.
+
 
 ## TBC analysis
 ### Pilot analysis
