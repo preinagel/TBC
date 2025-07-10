@@ -5,9 +5,11 @@ This repo constitutes a capsule for the Temporal Barcode project of the Allen In
 
 This code is directly associated with the open dataset available here:
 
-       Archive link:  https://dandiarchive.org/dandiset/000563/0.250311.2145
+       https://dandiarchive.org/dandiset/000563/0.250311.2145
 
-       DOI:           https://doi.org/10.48324/dandi.000563/0.250311.2145
+or here:
+
+       https://doi.org/10.48324/dandi.000563/0.250311.2145
 
 A demonstration notebook introducing the Temporal Barcode experiment and dataset can be found within the OpenScope Databook here:
 
