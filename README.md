@@ -31,13 +31,13 @@ A set of Python packages containing utility functions developed for working with
 ### Docs
 Documentation of the above packages, automatically updated from docstrings using Sphinx
 ### Demos
-A folder containing Jupyter notebooks that demonstrate how to use the functions in the other packages, or that demonstrate the validity of implementations and approximations in those functions, along with very small toy datasets used by those demos.
+A folder containing Jupyter notebooks that demonstrate how to use the functions in the packages, in some cases including sanity checks that validate correctness of the functions, along with very small toy data files used by those demos.
 
 
 ## TBC analysis
 ### Pilot analysis
-Data analysis pipelines validated using pilot datasets *prior to viewing any production data file* (to render transparent which analysis decisions were data-independent vs. data-dependent with resect to the production dataset)
+Data analysis pipelines developed using only pilot datasets *prior to viewing any production data*. We separate these to render transparent which hypotheses and analysis decisions were data-independent vs. data-dependent, with resect to the production dataset. This is not strictly a pre-registration for the final analysis, as the production data were available to us for part of the time we performed pilot analysis. We have no independent timestamp to prove we did not access it.
 ### Production analysis
-Data analysis pipelines that go from the raw data files all the way to final numerical outputs and figures to be included in publications, including supplementary materials of those publications
+Data analysis pipelines developed after viewing the production datasets, including scripts that start from the raw data files and reproduce the final numerical outputs and figures to be included in publications, including supplementary materials of those publications. Differences between this analysis and the pilot anlaysis occurred after data were seen, and therefore are at least potentially influenced by the results observed in the production dataset.
 
 
