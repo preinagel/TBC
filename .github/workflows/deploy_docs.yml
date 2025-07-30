@@ -2,34 +2,35 @@ name: Deploy Sphinx Docs
 
 on:
   push:
-    branches: [main]  # Or your default branch
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install sphinx
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install sphinx sphinx_rtd_theme
 
-    - name: Build docs
-      working-directory: code/sphinx_docs
-      run: |
-        sphinx-apidoc -o source ../TBCPackage --force
-        make html
+      - name: Build docs
+        working-directory: code/sphinx_docs
+        run: |
+          sphinx-apidoc -o source ../TBCPackage --force
+          sphinx-build -b html source build/html
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: code/sphinx_docs/build/html
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: code/sphinx_docs/build/html
