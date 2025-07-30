@@ -30,7 +30,8 @@ A Python package containing utility modules developed for working with this data
    Functions for conveniently visualizing output of computations (a direct companion of tbc_computation.py)  
 
 ### Docs  
-Documentation of the above modules, automatically updated from docstrings using Sphinx  
+Documentation of the above modules, automatically updated from docstrings using Sphinx here:
+       https://preinagel.github.io/TBC/
 
 ### Demos  
 A folder containing Jupyter notebooks that demonstrate how to use the functions in the modules, in some cases including sanity checks that validate correctness of the functions, along with very small toy data files used by those demos.
