@@ -12,8 +12,8 @@ import sys
 sys.path.insert(0, os.path.abspath('../../TBCPackage'))
 
 project = 'TBCPackage'
-copyright = '2025, Siddharth Vyasabattu'
-author = 'Siddharth Vyasabattu'
+# copyright = 
+# author = 
 release = '0.1'
 
 # -- General configuration ---------------------------------------------------

@@ -1,6 +1,6 @@
 @echo off
 echo [1/3] Regenerating .rst files with sphinx-apidoc...
-sphinx-apidoc -o source ../TBCPackage --force
+sphinx-apidoc -o source ../TBCPackage ../TBC_analysis --force
 
 echo [2/3] Building HTML documentation...
 call make.bat html
