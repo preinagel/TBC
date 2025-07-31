@@ -10,8 +10,9 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('../../TBC_Package'))
+sys.path.insert(0, os.path.abspath('../../TBC_Analysis'))
 
-project = 'TBC_Package'
+project = 'TBC'
 # copyright = 
 # author = 
 # release = '0.1'
