@@ -1,11 +1,11 @@
-Welcome to TBCPackage's documentation!
+Welcome to TBC's documentation!
 ======================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   modules
+   dummy
 
 
 Indices and tables
