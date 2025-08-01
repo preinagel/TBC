@@ -1,5 +1,5 @@
-TBCPackage
-==========
+TBC_Package
+===========
 
 .. toctree::
    :maxdepth: 4

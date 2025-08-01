@@ -10,7 +10,11 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('../../TBC_Package'))
-sys.path.insert(0, os.path.abspath('../../TBC_Analysis'))
+
+
+def setup(app):
+    app.add_css_file('hide_footer.css')
+
 
 project = 'TBC'
 # copyright = 
@@ -36,3 +40,6 @@ autodoc_member_order = 'bysource'
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+
+html_show_sphinx = False # hides the line 'Built with Sphinx using a theme provided by Read the Docs.'
