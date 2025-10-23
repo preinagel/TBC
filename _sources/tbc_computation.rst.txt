@@ -1,0 +1,7 @@
+tbc\_computation module
+=======================
+
+.. automodule:: tbc_computation
+   :members:
+   :show-inheritance:
+   :undoc-members:
