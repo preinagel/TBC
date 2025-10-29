@@ -2,7 +2,6 @@ import numpy as np
 import json
 import os
 from math import log
-from .tbc_computation import spkd_parallel
 from itertools import combinations
 
 
