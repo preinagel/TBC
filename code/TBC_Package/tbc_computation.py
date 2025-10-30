@@ -1,10 +1,7 @@
 import numpy as np
 from joblib import Parallel, delayed
 from tqdm import tqdm  # Import tqdm for progress bar
-from scipy.stats import linregress
-from .raster_utils import create_all_pairs, calc_firing_rate
-from itertools import combinations
-
+from raster_utils import create_all_pairs, calc_firing_rate
 
 def spkd(tli, tlj, duration, cost):
     """
@@ -67,8 +64,6 @@ def spkd(tli, tlj, duration, cost):
 
     return scr[nspi, nspj]
 
-
-
 def spkd_parallel(tli_list, tlj_list, duration, cost, n_jobs: int = -1):
     """
     Compute Victor-Purpura distances for multiple spike-train pairs in parallel.
@@ -97,8 +92,6 @@ def spkd_parallel(tli_list, tlj_list, duration, cost, n_jobs: int = -1):
         for tli, tlj in zip(tli_list, tlj_list)
     )
     return results
-
-
 
 def rand_distances(spike_train_lst, duration, cost, n_jobs=-1):
     """

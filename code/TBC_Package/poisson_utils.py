@@ -38,16 +38,15 @@ def generate_poisson_unit(FR, duration, N, seed=None):
     return [list(spikes) for spikes in spike_trains]  # convert to list-of-lists
 
 
-
-# === Main estimator ===
 def poisson_spkd_estimate(FR, cost, output, duration):
     """
-    Analytically estimates the expected SPKD (Victor–Purpura distance) between Poisson spike trains
-    without computing actual pairwise distances. This provides a fast and smooth approximation
-    of the null distribution for SPKD.
+    Estimates the expected SPKD (Victor–Purpura distance) between Poisson spike trains
+    by an empirically fit, parametric equation without computing actual pairwise distances. 
+    This provides a fast and smooth approximation of the null distribution for SPKD.
 
-    The model assumes a logistic-shaped sigmoid governed by firing-rate-dependent asymptotes and 
-    transition parameters. For a given firing rate λ (in Hz) and cost q, the SPKD per spike is modeled as:
+    The model assumes a logistic-shaped sigmoid governed by firing-rate-dependent asymptotes 
+    and transition parameters. For a given firing rate λ (in Hz) and cost q, the SPKD per 
+    spike is modeled as:
 
         SPKD(q; λ) = α(λ) + β(λ) / [1 + exp(-γ(λ) * (log10(q) - δ(λ)))]
 
@@ -58,7 +57,8 @@ def poisson_spkd_estimate(FR, cost, output, duration):
         • δ(λ) = 0.396 * log10(λ + 1.506) + 0.367  (logarithmic growth)
 
     These expressions were fit using empirical SPKD curves from synthetic Poisson data.
-    They allow the function to smoothly interpolate across costs and firing rates.
+    They allow the function to smoothly interpolate across costs and firing rates. The
+    numerically fit parameters are loaded from the file spkd_shape_params.json 
 
     Parameters:
         FR (float): Firing rate λ in Hz (spikes per second).
@@ -127,3 +127,6 @@ def poisson_spkd_estimate(FR, cost, output, duration):
     exponent = -gamma * (log_cost - delta)
     spkd = alpha + beta / (1 + np.exp(exponent))
     return spkd
+
+# Note - function to estimate expected spkd between poisson spiketrains analytically
+# is under development but not yet correct, draft is in poisson_spkd_from_isid.ipynb 
